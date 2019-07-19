@@ -14,14 +14,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
-<<<<<<< HEAD
 import com.example.sunrinthonclient.R;
 import com.example.sunrinthonclient.Dialogs.SelectTimeDialog;
-=======
 import com.example.sunrinthonclient.Activities.MainActivity;
 import com.example.sunrinthonclient.Dialogs.SelectTimeDialog;
 import com.example.sunrinthonclient.R;
->>>>>>> 45a419fd0792b21ba6d86ca8223a15b2e6ca295f
 import com.example.sunrinthonclient.Retrofit.Client;
 import com.example.sunrinthonclient.SelectedData;
 import com.example.sunrinthonclient.Dialogs.UserInfoDialog;

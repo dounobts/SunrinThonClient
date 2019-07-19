@@ -11,21 +11,15 @@ import android.widget.LinearLayout;
 
 import com.example.sunrinthonclient.Fragments.SelectDateBottomSheetFragment;
 import com.example.sunrinthonclient.R;
-<<<<<<< HEAD
 import com.example.sunrinthonclient.Activities.MainActivity;
 import com.example.sunrinthonclient.Activities.ReservationActivity;
 import com.example.sunrinthonclient.Fragments.SelectDateBottomSheetFragment;
-=======
->>>>>>> 45a419fd0792b21ba6d86ca8223a15b2e6ca295f
 import com.example.sunrinthonclient.Retrofit.Client;
 import com.example.sunrinthonclient.SelectedData;
 import com.google.android.material.snackbar.Snackbar;
 
-<<<<<<< HEAD
 import org.w3c.dom.Text;
 
-=======
->>>>>>> 45a419fd0792b21ba6d86ca8223a15b2e6ca295f
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
