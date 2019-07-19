@@ -29,11 +29,11 @@ public class ReservationCheckActivity extends Activity implements View.OnClickLi
         edit = findViewById(R.id.edit);
 
         ArrayList<ReservationData> datas = new ArrayList<>();
-        datas.add(new ReservationData("가", "A", "1"));
-        datas.add(new ReservationData("나", "B", "2"));
-        datas.add(new ReservationData("다", "C", "3"));
-        datas.add(new ReservationData("라", "D", "4"));
-        datas.add(new ReservationData("마", "E", "5"));
+        datas.add(new ReservationData("미래로 1", "7시~8시", "9/13"));
+        datas.add(new ReservationData("미래로 2", "7시~8시", "9/11"));
+        datas.add(new ReservationData("세계로 1", "7시~8시", "9/2"));
+        datas.add(new ReservationData("세계로 2", "7시~8시", "9/4"));
+        datas.add(new ReservationData("미래로 3", "7시~8시", "9/5"));
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         reservationAdapter = new ReservationAdapter(datas);
         reservationAdapter.context = getApplicationContext();

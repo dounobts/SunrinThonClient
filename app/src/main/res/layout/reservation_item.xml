@@ -23,6 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:padding="5dp"
         android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -46,11 +47,22 @@
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="@font/spoqa_han_sans_bold"
-        android:text="7시~8시"
+        android:text="미래로 1"
         android:textColor="#828282"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="0sp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/index"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

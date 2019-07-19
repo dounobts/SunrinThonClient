@@ -1,6 +1,8 @@
 package com.example.sunrinthonclient;
 
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +28,18 @@ public class ReservationAdapter extends RecyclerView.Adapter {
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         LayoutInflater inflater = (LayoutInflater) viewGroup.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE) ;
 
-        View view = inflater.inflate(R.layout.reservation_item, viewGroup, false) ;
+        final View view = inflater.inflate(R.layout.reservation_item, viewGroup, false) ;
+        TextView close = view.findViewById(R.id.time);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (isEdit) {
+                    TextView index = view.findViewById(R.id.index);
+                    datas.remove(Integer.parseInt(index.getText().toString()));
+                    notifyDataSetChanged();
+                }
+            }
+        });
         RecyclerView.ViewHolder vh = new ViewHolder(view);
 
         return vh;
@@ -37,6 +50,7 @@ public class ReservationAdapter extends RecyclerView.Adapter {
         ViewHolder vh = (ViewHolder)viewHolder;
         vh.day.setText(datas.get(i).day);
         vh.place.setText(datas.get(i).place);
+        vh.index.setText(i + "");
 
         if (isEdit) {
             vh.time.setText("X");
@@ -55,7 +69,7 @@ public class ReservationAdapter extends RecyclerView.Adapter {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView day, time, place;
+        TextView day, time, place, index;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -63,6 +77,7 @@ public class ReservationAdapter extends RecyclerView.Adapter {
             day = itemView.findViewById(R.id.day);
             time = itemView.findViewById(R.id.time);
             place = itemView.findViewById(R.id.place);
+            index = itemView.findViewById(R.id.index);
         }
     }
 }
