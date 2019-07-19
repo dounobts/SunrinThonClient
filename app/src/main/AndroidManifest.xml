@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+<<<<<<< HEAD
         <activity
             android:name=".Activities.MainActivity2">
             <intent-filter>
@@ -19,6 +20,21 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+=======
+        <activity android:name=".Activities.MainActivity">
+        </activity>
+        <activity android:name=".Activities.ReservationCheckActivity"></activity>
+        <activity android:name=".Activities.LoginActivity" >            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+        </activity>
+        <activity android:name=".Activities.ReservationActivity">
+        </activity>
+        <activity android:name=".Activities.AttendanceCheckActivity">
+>>>>>>> 45a419fd0792b21ba6d86ca8223a15b2e6ca295f
         </activity>
         <activity android:name=".Activities.MainActivity"></activity>
         <activity android:name=".Activities.ReservationCheckActivity" />

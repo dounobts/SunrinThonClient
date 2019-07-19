@@ -44,7 +44,7 @@ public class ReservationCheckActivity extends Activity implements View.OnClickLi
         edit = findViewById(R.id.edit);
         back = findViewById(R.id.button_back);
 
-        Client.retrofitService.getreservedrooms(calendar.get(Calendar.MONTH), Client.username).enqueue(new Callback<ResponseBody>() {
+        Client.retrofitService.getreservedrooms(calendar.get(Calendar.MONTH)+1, Client.username).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                 ArrayList<ReservationData> datas = new ArrayList<>();
