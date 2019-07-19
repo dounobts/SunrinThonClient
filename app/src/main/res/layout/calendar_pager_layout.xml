@@ -17,136 +17,163 @@
         android:layout_weight="1"
         android:shrinkColumns="0, 1, 2, 3, 4">
         <TableRow>
+            <TextView
+                android:text="Mon"
+                android:textSize="15sp"
+                android:id="@+id/week_mon"
+                android:gravity="center"/>
+            <TextView
+                android:text="Tue"
+                android:textSize="15sp"
+                android:id="@+id/week_tue"
+                android:gravity="center"/>
+            <TextView
+                android:text="Wed"
+                android:textSize="15sp"
+                android:id="@+id/week_wed"
+                android:gravity="center"/>
+            <TextView
+                android:text="Thur"
+                android:textSize="15sp"
+                android:id="@+id/week_thur"
+                android:gravity="center"/>
+            <TextView
+                android:text="Fri"
+                android:textSize="15sp"
+                android:id="@+id/week_fri"
+                android:gravity="center"/>
+        </TableRow>
+        <TableRow>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date1"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date2"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date3"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date4"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date5"
                 android:gravity="center"/>
         </TableRow>
         <TableRow>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date6"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date7"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date8"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date9"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date10"
                 android:gravity="center"/>
         </TableRow>
         <TableRow>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date11"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date12"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date13"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date14"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date15"
                 android:gravity="center"/>
         </TableRow>
         <TableRow>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date16"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date17"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date18"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date19"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date20"
                 android:gravity="center"/>
         </TableRow>
         <TableRow>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date21"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date22"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date23"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date24"
                 android:gravity="center"/>
             <Button
-                android:text="1"
+                android:text=""
                 android:textSize="15sp"
                 android:id="@+id/date25"
                 android:gravity="center"/>
