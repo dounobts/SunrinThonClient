@@ -9,18 +9,16 @@ import android.view.View;
 import android.view.Window;
 import android.widget.LinearLayout;
 
-<<<<<<< HEAD:app/src/main/java/com/example/sunrinthonclient/Dialogs/SelectTimeDialog.java
 import com.example.sunrinthonclient.Fragments.SelectDateBottomSheetFragment;
 import com.example.sunrinthonclient.R;
-=======
 import com.example.sunrinthonclient.Activities.MainActivity;
 import com.example.sunrinthonclient.Activities.ReservationActivity;
 import com.example.sunrinthonclient.Fragments.SelectDateBottomSheetFragment;
 import com.example.sunrinthonclient.Retrofit.Client;
+import com.example.sunrinthonclient.SelectedData;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.w3c.dom.Text;
->>>>>>> 8c8fb5962b4b294dfcb77e711af346d75ece1aaa:app/src/main/java/com/example/sunrinthonclient/SelectTimeDialog.java
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
