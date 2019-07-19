@@ -5,11 +5,13 @@ import android.app.Dialog;
 import android.content.Context;
 import android.view.View;
 import android.view.Window;
+import android.widget.TextView;
 
 import com.example.sunrinthonclient.Fragments.SelectDateBottomSheetFragment;
 import com.example.sunrinthonclient.R;
 
 public class UserInfoDialog extends Dialog {
+
     public UserInfoDialog(Context context) {
         super(context);
 
