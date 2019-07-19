@@ -14,6 +14,7 @@ import com.example.sunrinthonclient.Activities.MainActivity;
 import com.example.sunrinthonclient.Activities.ReservationActivity;
 import com.example.sunrinthonclient.R;
 import com.example.sunrinthonclient.Retrofit.Client;
+import com.example.sunrinthonclient.SelectedData;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.fragment.app.Fragment;
@@ -52,6 +53,8 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                         switch(response.code()) {
                             case 200:
                                 Client.username = username;
+                                if (username.equals("admin"))
+                                    SelectedData.isAdmin = true;
                                 activity.finish();
                                 startActivity(new Intent(activity, MainActivity.class));
                                 break;
