@@ -1,6 +1,7 @@
 package com.example.sunrinthonclient.Fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +25,7 @@ public class SelectPlaceFragment extends Fragment implements View.OnClickListene
 
     ArrayList<LinearLayout> buttons = new ArrayList<>();
     ImageButton back, next;
+    TextView title;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class SelectPlaceFragment extends Fragment implements View.OnClickListene
 
         back = view.findViewById(R.id.button_back);
         next = view.findViewById(R.id.button_next);
+        title = view.findViewById(R.id.title);
 
         SelectedData.place = -1;
         buttons.add((LinearLayout) view.findViewById(R.id.room1));
@@ -58,6 +61,8 @@ public class SelectPlaceFragment extends Fragment implements View.OnClickListene
 
         back.setOnClickListener(this);
         next.setOnClickListener(this);
+        if (SelectedData.isAdmin)
+            title.setText("열람하실 방을\n선택해주세요.");
 
         for (LinearLayout linearLayout : buttons) {
             linearLayout.setOnClickListener(this);

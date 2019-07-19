@@ -43,17 +43,33 @@ public class SelectDateBottomSheetFragment extends BottomSheetDialogFragment imp
 
     @Override
     public void onClick(View v) {
-        if (v.equals(timeButton1)) {
-            SelectedData.time = 1;
-            new SelectTimeDialog(getContext(), this, getActivity()).show();
+        if (SelectedData.isAdmin) {
+            if (v.equals(timeButton1)) {
+                SelectedData.time = 1;
+                // 점유자 띄우기
+            }
+            else if (v.equals(timeButton2)) {
+                SelectedData.time = 2;
+                // 점유자 띄우기
+            }
+            else if (v.equals(timeButton3)) {
+                SelectedData.time = 3;
+                // 점유자 띄우기
+            }
         }
-        else if (v.equals(timeButton2)) {
-            SelectedData.time = 2;
-            new SelectTimeDialog(getContext(), this, getActivity()).show();
-        }
-        else if (v.equals(timeButton3)) {
-            SelectedData.time = 3;
-            new SelectTimeDialog(getContext(), this, getActivity()).show();
+        else {
+            if (v.equals(timeButton1)) {
+                SelectedData.time = 1;
+                new SelectTimeDialog(getContext(), this, getActivity()).show();
+            }
+            else if (v.equals(timeButton2)) {
+                SelectedData.time = 2;
+                new SelectTimeDialog(getContext(), this, getActivity()).show();
+            }
+            else if (v.equals(timeButton3)) {
+                SelectedData.time = 3;
+                new SelectTimeDialog(getContext(), this, getActivity()).show();
+            }
         }
     }
 }

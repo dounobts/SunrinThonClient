@@ -5,10 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.sunrinthonclient.Activities.ReservationActivity;
 import com.example.sunrinthonclient.CalendarPagerAdapter;
 import com.example.sunrinthonclient.R;
+import com.example.sunrinthonclient.SelectedData;
 
 import java.util.Calendar;
 
@@ -21,6 +23,7 @@ public class SelectDateFragment extends Fragment implements View.OnClickListener
     ViewPager viewPager;
 
     ImageButton back;
+    TextView title;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -34,6 +37,10 @@ public class SelectDateFragment extends Fragment implements View.OnClickListener
 
         back = view.findViewById(R.id.button_back);
         back.setOnClickListener(this);
+
+        title = view.findViewById(R.id.title);
+        if (SelectedData.isAdmin)
+            title.setText("열람할 날짜를\n눌러주세요.");
 
         return view;
     }

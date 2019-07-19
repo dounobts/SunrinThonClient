@@ -8,26 +8,29 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.sunrinthonclient.Activities.ReservationActivity;
 import com.example.sunrinthonclient.Fragments.SelectDateBottomSheetFragment;
 
+import org.w3c.dom.Text;
+
 public class SelectTimeDialog extends Dialog {
-    public SelectTimeDialog(Context context, final SelectDateBottomSheetFragment fragment, final Activity activity) {
+    public SelectTimeDialog(final Context context, final SelectDateBottomSheetFragment fragment, final Activity activity) {
         super(context);
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.select_dialog_layout);
-        final Button yes = findViewById(R.id.yes);
-        final Button no = findViewById(R.id.no);
+        final LinearLayout yes = findViewById(R.id.yes);
+        final LinearLayout no = findViewById(R.id.no);
 
         yes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.i("예약", "YES");
                 dismiss();
-                fragment.dismiss();
-                activity.finish();
+                new CompleteDialog(context, fragment, activity).show();
             }
         });
         no.setOnClickListener(new View.OnClickListener() {
