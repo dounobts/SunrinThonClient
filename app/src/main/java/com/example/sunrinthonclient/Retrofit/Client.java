@@ -13,6 +13,7 @@ public final class Client {
     public static final Client INSTANCE;
     public static String name;
     public static String personalid;
+    public static String username;
 
     public final API getRetrofitService() {
         return retrofitService;

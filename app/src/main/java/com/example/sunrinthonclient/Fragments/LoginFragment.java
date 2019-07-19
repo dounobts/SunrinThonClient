@@ -10,6 +10,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.sunrinthonclient.Activities.LoginActivity;
+import com.example.sunrinthonclient.Activities.MainActivity;
 import com.example.sunrinthonclient.Activities.ReservationActivity;
 import com.example.sunrinthonclient.R;
 import com.example.sunrinthonclient.Retrofit.Client;
@@ -43,15 +44,16 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = usernameInput.getText().toString();
-                String password = passwordInput.getText().toString();
+                final String username = usernameInput.getText().toString();
+                final String password = passwordInput.getText().toString();
                 Client.retrofitService.login(username, password).enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                         switch(response.code()) {
                             case 200:
+                                Client.username = username;
                                 activity.finish();
-                                startActivity(new Intent(activity, ReservationActivity.class));
+                                startActivity(new Intent(activity, MainActivity.class));
                                 break;
                             case 404:
                                 Snackbar.make(loginButton, "로그인 실패 : 아이디나 비번이 올바르지 않습니다", Snackbar.LENGTH_SHORT).show();
