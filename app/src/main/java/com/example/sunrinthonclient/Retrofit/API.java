@@ -28,8 +28,7 @@ public interface API  {
     @POST("/reservation/reserve")
     @FormUrlEncoded
     @NotNull
-    Call<ResponseBody> reserve(@Field("username") @NotNull String username, @Field("personalID")  int personalID,
-                               @Field("purpose") @NotNull String purpose, @Field("roomnumber")  int roomnumber,
+    Call<ResponseBody> reserve(@Field("username") @NotNull String username, @Field("roomnumber")  int roomnumber,
                                @Field("months")  int months, @Field("days")  int days, @Field("time") int time);
 
     @POST("/admin/cancel")
