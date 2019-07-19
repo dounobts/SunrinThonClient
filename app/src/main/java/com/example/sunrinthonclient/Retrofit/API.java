@@ -43,6 +43,16 @@ public interface API  {
     @NotNull
     Call<ResponseBody> getallroomsByAdmin(@Field("months")  int months, @Field("days")  int days);
 
+    @POST("/admin/getPenalty")
+    @FormUrlEncoded
+    @NotNull
+    Call<ResponseBody> getPenalty(@Field("username") @NonNull String username);
+
+    @POST("/admin/addPenalty")
+    @FormUrlEncoded
+    @NotNull
+    Call<ResponseBody> addPenalty(@Field("username") @NonNull String username);
+
     @POST("/admin/getrooms")
     @FormUrlEncoded
     @NotNull
@@ -66,6 +76,11 @@ public interface API  {
     @FormUrlEncoded
     @NotNull
     Call<ResponseBody> getallrooms(@Field("months")  int months, @Field("days")  int days);
+
+    @POST("/reservation/getreservedrooms")
+    @FormUrlEncoded
+    @NotNull
+    Call<ResponseBody> getreservedrooms(@Field("months")  int months, @Field("username")  @NonNull String username);
 
     @POST("/reservation/getrooms")
     @FormUrlEncoded
