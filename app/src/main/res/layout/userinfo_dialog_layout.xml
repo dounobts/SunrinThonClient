@@ -11,23 +11,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="50dp"
-        android:paddingRight="130dp"
-        android:paddingLeft="130dp">
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/check"/>
+        android:layout_marginTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20616이우령"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="36sp"
+            android:fontFamily="@font/spoqa_han_sans_bold"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:gravity="center">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="예약이 완료되었습니다."
+            android:text="9월 13일 7시의 예약자입니다"
             android:fontFamily="@font/spoqa_han_sans_regular"/>
 
     </LinearLayout>

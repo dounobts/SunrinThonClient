@@ -16,6 +16,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.sunrinthonclient.R;
 import com.example.sunrinthonclient.SelectTimeDialog;
 import com.example.sunrinthonclient.SelectedData;
+import com.example.sunrinthonclient.UserInfoDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
@@ -44,17 +45,19 @@ public class SelectDateBottomSheetFragment extends BottomSheetDialogFragment imp
     @Override
     public void onClick(View v) {
         if (SelectedData.isAdmin) {
+            Log.i("123", "123");
+
             if (v.equals(timeButton1)) {
-                SelectedData.time = 1;
-                // 점유자 띄우기
+                new UserInfoDialog(getContext()).show();
             }
             else if (v.equals(timeButton2)) {
                 SelectedData.time = 2;
-                // 점유자 띄우기
+                new UserInfoDialog(getContext()).show();
+
             }
             else if (v.equals(timeButton3)) {
                 SelectedData.time = 3;
-                // 점유자 띄우기
+                new UserInfoDialog(getContext()).show();
             }
         }
         else {
