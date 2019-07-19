@@ -48,32 +48,37 @@ public class CertificationFragment extends Fragment implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        if (view.equals(back)) {
-            activity.changeFragment(0);
-        }
-        else if (view.equals(check)) {
-            Client.retrofitService.certificate(keyEdit.getText().toString(), Integer.parseInt(personalIdEdit.getText().toString())).enqueue(new Callback<ResponseBody>() {
-                @Override
-                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                    switch(response.code()) {
-                        case 200:
-                            Client.personalid = personalIdEdit.getText().toString();
-                            Client.name = nameEdit.getText().toString();
-                            activity.changeFragment(2);
-                            break;
-                        case 403:
-                            Snackbar.make(back, "인증 실패 : 올바르지 않은 인증키입니다.", Snackbar.LENGTH_SHORT).show();
-                            break;
-                        case 500:
-                            Snackbar.make(back, "인증 실패 : 서버 오류", Snackbar.LENGTH_SHORT).show();
+        try {
+
+            if (view.equals(back)) {
+                activity.changeFragment(0);
+            }
+            else if (view.equals(check)) {
+                Client.retrofitService.certificate(keyEdit.getText().toString(), Integer.parseInt(personalIdEdit.getText().toString())).enqueue(new Callback<ResponseBody>() {
+                    @Override
+                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                        switch(response.code()) {
+                            case 200:
+                                Client.personalid = personalIdEdit.getText().toString();
+                                Client.name = nameEdit.getText().toString();
+                                activity.changeFragment(2);
+                                break;
+                            case 403:
+                                Snackbar.make(back, "인증 실패 : 올바르지 않은 인증키입니다.", Snackbar.LENGTH_SHORT).show();
+                                break;
+                            case 500:
+                                Snackbar.make(back, "인증 실패 : 서버 오류", Snackbar.LENGTH_SHORT).show();
+                        }
                     }
-                }
 
-                @Override
-                public void onFailure(Call<ResponseBody> call, Throwable t) {
+                    @Override
+                    public void onFailure(Call<ResponseBody> call, Throwable t) {
 
-                }
-            });
+                    }
+                });
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
