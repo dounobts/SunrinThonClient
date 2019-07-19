@@ -59,11 +59,10 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                                 if (username.equals("admin")) {
                                     SelectedData.isAdmin = true;
                                     startActivity(new Intent(activity, MainActivity2.class));
-
                                 }
                                 else {
+                                    SelectedData.isAdmin = false;
                                     startActivity(new Intent(activity, MainActivity.class));
-
                                 }
                                 break;
                             case 404:
