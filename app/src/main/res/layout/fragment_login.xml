@@ -6,20 +6,60 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.LoginFragment">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="66dp"
+        android:fontFamily="@font/spoqa_han_sans_bold"
+        android:lineSpacingExtra="14.3sp"
+        android:textColor="#828282"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Welcome!" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginBottom="8dp"
+        android:lineSpacingExtra="8sp"
+        android:textColor="#707070"
+        android:textSize="16.7sp"
+        android:fontFamily="@font/spoqa_han_sans_regular"
+        app:layout_constraintBottom_toTopOf="@+id/input_id"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="ID" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:fontFamily="@font/spoqa_han_sans_regular"
+        android:layout_marginBottom="8dp"
+        android:lineSpacingExtra="8sp"
+        android:textColor="#707070"
+        android:textSize="16.7sp"
+        app:layout_constraintBottom_toTopOf="@+id/input_password"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="PW" />
+
     <EditText
         android:id="@+id/input_id"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="268dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="12dp"
-        android:hint="ID"
         android:inputType="text"
         android:maxLines="1"
-        app:layout_constraintBottom_toTopOf="@+id/input_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints=""/>
 
     <EditText
         android:id="@+id/input_password"
@@ -27,40 +67,48 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="24dp"
-        android:hint="PASSWORD"
+        android:layout_marginBottom="292dp"
         android:inputType="text"
         android:maxLines="1"
-        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/button_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="20dp"
-        android:text="Login"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
+        android:autofillHints=""/>
 
     <Button
+        android:id="@+id/button_login"
+        android:layout_width="77dp"
+        android:layout_height="77dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="24dp"
+        android:lineSpacingExtra="6.3sp"
+        android:fontFamily="@font/spoqa_han_sans_regular"
+        android:textColor="#828282"
+        android:textSize="13.3sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_password"
+        android:text="비밀번호를 잊었나요?" />
+
+    <TextView
         android:id="@+id/button_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="88dp"
-        android:text="Register"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="365dp" />
-
+        android:layout_marginStart="63dp"
+        android:layout_marginBottom="58dp"
+        android:lineSpacingExtra="9.7sp"
+        android:textColor="#707070"
+        android:fontFamily="@font/spoqa_han_sans_bold"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="회원가입" />
 </androidx.constraintlayout.widget.ConstraintLayout>

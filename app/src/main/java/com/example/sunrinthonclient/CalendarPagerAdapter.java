@@ -5,7 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.TextView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -58,32 +58,32 @@ public class CalendarPagerAdapter extends PagerAdapter {
             nowDay = 3;
         }
 
-        ArrayList<Button> buttons = new ArrayList<>();
-        buttons.add((Button)view.findViewById(R.id.date1));
-        buttons.add((Button)view.findViewById(R.id.date2));
-        buttons.add((Button)view.findViewById(R.id.date3));
-        buttons.add((Button)view.findViewById(R.id.date4));
-        buttons.add((Button)view.findViewById(R.id.date5));
-        buttons.add((Button)view.findViewById(R.id.date6));
-        buttons.add((Button)view.findViewById(R.id.date7));
-        buttons.add((Button)view.findViewById(R.id.date8));
-        buttons.add((Button)view.findViewById(R.id.date9));
-        buttons.add((Button)view.findViewById(R.id.date10));
-        buttons.add((Button)view.findViewById(R.id.date11));
-        buttons.add((Button)view.findViewById(R.id.date12));
-        buttons.add((Button)view.findViewById(R.id.date13));
-        buttons.add((Button)view.findViewById(R.id.date14));
-        buttons.add((Button)view.findViewById(R.id.date15));
-        buttons.add((Button)view.findViewById(R.id.date16));
-        buttons.add((Button)view.findViewById(R.id.date17));
-        buttons.add((Button)view.findViewById(R.id.date18));
-        buttons.add((Button)view.findViewById(R.id.date19));
-        buttons.add((Button)view.findViewById(R.id.date20));
-        buttons.add((Button)view.findViewById(R.id.date21));
-        buttons.add((Button)view.findViewById(R.id.date22));
-        buttons.add((Button)view.findViewById(R.id.date23));
-        buttons.add((Button)view.findViewById(R.id.date24));
-        buttons.add((Button)view.findViewById(R.id.date25));
+        ArrayList<TextView> buttons = new ArrayList<>();
+        buttons.add((TextView)view.findViewById(R.id.date1));
+        buttons.add((TextView)view.findViewById(R.id.date2));
+        buttons.add((TextView)view.findViewById(R.id.date3));
+        buttons.add((TextView)view.findViewById(R.id.date4));
+        buttons.add((TextView)view.findViewById(R.id.date5));
+        buttons.add((TextView)view.findViewById(R.id.date6));
+        buttons.add((TextView)view.findViewById(R.id.date7));
+        buttons.add((TextView)view.findViewById(R.id.date8));
+        buttons.add((TextView)view.findViewById(R.id.date9));
+        buttons.add((TextView)view.findViewById(R.id.date10));
+        buttons.add((TextView)view.findViewById(R.id.date11));
+        buttons.add((TextView)view.findViewById(R.id.date12));
+        buttons.add((TextView)view.findViewById(R.id.date13));
+        buttons.add((TextView)view.findViewById(R.id.date14));
+        buttons.add((TextView)view.findViewById(R.id.date15));
+        buttons.add((TextView)view.findViewById(R.id.date16));
+        buttons.add((TextView)view.findViewById(R.id.date17));
+        buttons.add((TextView)view.findViewById(R.id.date18));
+        buttons.add((TextView)view.findViewById(R.id.date19));
+        buttons.add((TextView)view.findViewById(R.id.date20));
+        buttons.add((TextView)view.findViewById(R.id.date21));
+        buttons.add((TextView)view.findViewById(R.id.date22));
+        buttons.add((TextView)view.findViewById(R.id.date23));
+        buttons.add((TextView)view.findViewById(R.id.date24));
+        buttons.add((TextView)view.findViewById(R.id.date25));
 
         while (nowDay <= maxDay){
             buttons.get(index).setText("" + nowDay);
@@ -96,7 +96,7 @@ public class CalendarPagerAdapter extends PagerAdapter {
             nowDay++;
         }
 
-        for (Button button : buttons) {
+        for (TextView button : buttons) {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

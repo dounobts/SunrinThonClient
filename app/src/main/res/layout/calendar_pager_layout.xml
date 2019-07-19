@@ -2,224 +2,182 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/text"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:gravity="center"
+        android:lineSpacingExtra="14sp"
         android:text="1"
-        android:textSize="60sp"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:fontFamily="@font/spoqa_han_sans_bold"
+        android:textColor="#828282"
+        android:textSize="23.3sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="9" />
 
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="30dp"
         android:layout_marginBottom="8dp"
         android:layout_weight="1"
         android:shrinkColumns="0, 1, 2, 3, 4"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:stretchColumns="0, 1, 2, 3, 4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="30dp">
 
         <TableRow>
 
             <TextView
                 android:id="@+id/week_mon"
-                android:gravity="center"
-                android:text="Mon"
-                android:textSize="15sp" />
+                style="@style/week"
+                android:text="M" />
 
             <TextView
                 android:id="@+id/week_tue"
-                android:gravity="center"
-                android:text="Tue"
-                android:textSize="15sp" />
+                style="@style/week"
+                android:text="THU" />
 
             <TextView
                 android:id="@+id/week_wed"
-                android:gravity="center"
-                android:text="Wed"
-                android:textSize="15sp" />
+                style="@style/week"
+                android:text="W" />
 
             <TextView
                 android:id="@+id/week_thur"
-                android:gravity="center"
-                android:text="Thur"
-                android:textSize="15sp" />
+                style="@style/week"
+                android:text="THR" />
 
             <TextView
                 android:id="@+id/week_fri"
-                android:gravity="center"
-                android:text="Fri"
-                android:textSize="15sp" />
+                style="@style/week"
+                android:text="F" />
         </TableRow>
 
         <TableRow>
 
-            <Button
+            <TextView
                 android:id="@+id/date1"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date2"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date3"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date4"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date5"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
         </TableRow>
 
         <TableRow>
 
-            <Button
+            <TextView
                 android:id="@+id/date6"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date7"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date8"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date9"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date10"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
         </TableRow>
 
         <TableRow>
 
-            <Button
+            <TextView
                 android:id="@+id/date11"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date12"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date13"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date14"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date15"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
         </TableRow>
 
         <TableRow>
 
-            <Button
+            <TextView
                 android:id="@+id/date16"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date17"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date18"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date19"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date20"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
         </TableRow>
 
         <TableRow>
 
-            <Button
+            <TextView
                 android:id="@+id/date21"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date22"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date23"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date24"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
 
-            <Button
+            <TextView
                 android:id="@+id/date25"
-                android:gravity="center"
-                android:text=""
-                android:textSize="15sp" />
+                style="@style/day" />
         </TableRow>
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
