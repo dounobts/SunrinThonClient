@@ -98,14 +98,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_student" />
 
-    <Button
-        android:id="@+id/button_login"
+    <ImageButton
+        android:id="@+id/button_register"
         android:layout_width="77dp"
         android:layout_height="77dp"
         android:layout_marginEnd="47dp"
         android:layout_marginBottom="34dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/next_button"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"

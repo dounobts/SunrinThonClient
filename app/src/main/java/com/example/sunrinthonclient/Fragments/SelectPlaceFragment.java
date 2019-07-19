@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.example.sunrinthonclient.Activities.MainActivity;
 import com.example.sunrinthonclient.R;
@@ -15,7 +16,7 @@ public class SelectPlaceFragment extends Fragment implements View.OnClickListene
     MainActivity activity;
     View view;
 
-    Button toFuture1, toFuture2, toFuture3,
+    LinearLayout toFuture1, toFuture2, toFuture3,
             toWorld1, toWorld2, toWorld3,
             toWorld4, toWorld5, toWorld6;
 
