@@ -13,14 +13,19 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.PagerAdapter;
+
+import com.example.sunrinthonclient.Fragments.SelectDateBottomSheetFragment;
 
 public class CalendarPagerAdapter extends PagerAdapter {
 
     private Context mContext = null ;
+    private FragmentManager fragmentManager;
 
-    public CalendarPagerAdapter(Context context) {
+    public CalendarPagerAdapter(Context context, FragmentManager fragmentManager) {
         mContext = context;
+        this.fragmentManager = fragmentManager;
     }
 
     @Override
@@ -104,7 +109,10 @@ public class CalendarPagerAdapter extends PagerAdapter {
                     Log.i("calendar", "month : " + month);
                     Log.i("calendar", "day : " + ((TextView)view).getText().toString());
 
-                    new SelectTimeDialog(mContext).show();
+                    //new SelectTimeDialog(mContext).show();
+                    SelectDateBottomSheetFragment bottomSheetDialog = SelectDateBottomSheetFragment.getInstance();
+                    bottomSheetDialog.show(fragmentManager,"bottomSheet");
+
                 }
             });
         }

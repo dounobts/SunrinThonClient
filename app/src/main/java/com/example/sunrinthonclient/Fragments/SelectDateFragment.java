@@ -22,7 +22,7 @@ public class SelectDateFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_select_date, container, false);
 
         viewPager = view.findViewById(R.id.calandar_viewPager);
-        CalendarPagerAdapter calendarPagerAdapter = new CalendarPagerAdapter(getContext());
+        CalendarPagerAdapter calendarPagerAdapter = new CalendarPagerAdapter(getContext(), getFragmentManager());
         viewPager.setAdapter(calendarPagerAdapter);
         setCalendar();
 
