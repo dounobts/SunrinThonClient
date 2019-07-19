@@ -4,9 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.LoginFragment">
+    tools:context=".Fragments.LoginFragment"
+    android:background="@drawable/white_background">
 
-    <TextView
+<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="47dp"
@@ -99,7 +100,7 @@
         app:layout_constraintTop_toBottomOf="@+id/input_student" />
 
     <ImageButton
-        android:id="@+id/button_login"
+        android:id="@+id/button_check"
         android:layout_width="77dp"
         android:layout_height="77dp"
         android:layout_marginEnd="47dp"
@@ -107,6 +108,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/next_button"/>
+
+    <ImageButton
+        android:id="@+id/button_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:layout_width="wrap_content"

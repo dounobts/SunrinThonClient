@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.LoginFragment">
+    tools:context=".Fragments.LoginFragment"
+    android:background="@drawable/white_background">
 
     <TextView
         android:layout_width="wrap_content"
@@ -29,7 +30,7 @@
         android:text="ID"
         android:textColor="#707070"
         android:textSize="16.7sp"
-        app:layout_constraintBottom_toTopOf="@+id/input_student"
+        app:layout_constraintBottom_toTopOf="@+id/input_username"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -42,7 +43,7 @@
         android:text="PW"
         android:textColor="#707070"
         android:textSize="16.7sp"
-        app:layout_constraintBottom_toTopOf="@+id/input_code"
+        app:layout_constraintBottom_toTopOf="@+id/input_password"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -92,7 +93,7 @@
         android:textColor="#828282"
         android:textSize="13.3sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_code" />
+        app:layout_constraintTop_toBottomOf="@+id/input_password" />
 
     <TextView
         android:id="@+id/button_register"
