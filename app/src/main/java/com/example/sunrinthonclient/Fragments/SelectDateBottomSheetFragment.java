@@ -15,6 +15,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.sunrinthonclient.R;
 import com.example.sunrinthonclient.SelectTimeDialog;
+import com.example.sunrinthonclient.SelectedData;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
@@ -37,13 +38,22 @@ public class SelectDateBottomSheetFragment extends BottomSheetDialogFragment imp
         timeButton2.setOnClickListener(this);
         timeButton3.setOnClickListener(this);
 
-        //new SelectTimeDialog(mContext).show();
-
         return view;
     }
 
     @Override
-    public void onClick(View view) {
-        
+    public void onClick(View v) {
+        if (v.equals(timeButton1)) {
+            SelectedData.time = 1;
+            new SelectTimeDialog(getContext(), this, getActivity()).show();
+        }
+        else if (v.equals(timeButton2)) {
+            SelectedData.time = 2;
+            new SelectTimeDialog(getContext(), this, getActivity()).show();
+        }
+        else if (v.equals(timeButton3)) {
+            SelectedData.time = 3;
+            new SelectTimeDialog(getContext(), this, getActivity()).show();
+        }
     }
 }
