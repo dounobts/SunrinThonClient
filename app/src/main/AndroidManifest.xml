@@ -15,13 +15,16 @@
         <activity android:name=".Activities.MainActivity">
         </activity>
         <activity android:name=".Activities.ReservationCheckActivity"></activity>
-        <activity android:name=".Activities.LoginActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".Activities.LoginActivity" >            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter></activity>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+        </activity>
         <activity android:name=".Activities.ReservationActivity">
+        </activity>
+        <activity android:name=".Activities.AttendanceCheckActivity">
         </activity>
     </application>
 

@@ -1,4 +1,4 @@
-package com.example.sunrinthonclient;
+package com.example.sunrinthonclient.Dialogs;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -9,6 +9,7 @@ import android.view.Window;
 import android.widget.LinearLayout;
 
 import com.example.sunrinthonclient.Fragments.SelectDateBottomSheetFragment;
+import com.example.sunrinthonclient.R;
 
 public class CompleteDialog extends Dialog {
     Activity activity;

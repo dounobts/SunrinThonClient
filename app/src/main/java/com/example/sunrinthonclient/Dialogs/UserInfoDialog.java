@@ -1,4 +1,4 @@
-package com.example.sunrinthonclient;
+package com.example.sunrinthonclient.Dialogs;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -7,8 +7,9 @@ import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
 
-import com.example.sunrinthonclient.Fragments.SelectDateBottomSheetFragment;
+import com.example.sunrinthonclient.R;
 import com.example.sunrinthonclient.Retrofit.Client;
+import com.example.sunrinthonclient.SelectedData;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -1,4 +1,4 @@
-package com.example.sunrinthonclient;
+package com.example.sunrinthonclient.Dialogs;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -7,18 +7,13 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import com.example.sunrinthonclient.Activities.MainActivity;
-import com.example.sunrinthonclient.Activities.ReservationActivity;
 import com.example.sunrinthonclient.Fragments.SelectDateBottomSheetFragment;
+import com.example.sunrinthonclient.R;
 import com.example.sunrinthonclient.Retrofit.Client;
+import com.example.sunrinthonclient.SelectedData;
 import com.google.android.material.snackbar.Snackbar;
-
-import org.w3c.dom.Text;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;

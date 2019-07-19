@@ -13,16 +13,13 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.example.sunrinthonclient.Activities.MainActivity;
+import com.example.sunrinthonclient.Dialogs.SelectTimeDialog;
 import com.example.sunrinthonclient.R;
 import com.example.sunrinthonclient.Retrofit.Client;
-import com.example.sunrinthonclient.SelectTimeDialog;
 import com.example.sunrinthonclient.SelectedData;
-import com.example.sunrinthonclient.UserInfoDialog;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.example.sunrinthonclient.Dialogs.UserInfoDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.snackbar.Snackbar;
 

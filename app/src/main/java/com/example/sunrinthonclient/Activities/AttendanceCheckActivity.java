@@ -1,15 +1,22 @@
 package com.example.sunrinthonclient.Activities;
 
-import android.os.Bundle;
 import android.app.Activity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.sunrinthonclient.AttendanceAdapter;
+import com.example.sunrinthonclient.AttendanceData;
 import com.example.sunrinthonclient.R;
 import com.example.sunrinthonclient.ReservationAdapter;
 import com.example.sunrinthonclient.ReservationData;
 import com.example.sunrinthonclient.Retrofit.Client;
+import com.example.sunrinthonclient.SelectedData;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -17,40 +24,31 @@ import java.util.Calendar;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ReservationCheckActivity extends Activity implements View.OnClickListener {
+public class AttendanceCheckActivity extends Activity implements View.OnClickListener {
 
-    ReservationAdapter reservationAdapter;
+    AttendanceAdapter attendanceAdapter;
     RecyclerView recyclerView;
-    TextView edit;
     ImageButton back;
+    ArrayList<AttendanceData> datas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reservation_check);
+        setContentView(R.layout.activity_attendance_check);
+
+        datas = new ArrayList<>();
         Calendar calendar = Calendar.getInstance();
-
-        recyclerView = findViewById(R.id.recyclerView);
-        edit = findViewById(R.id.edit);
-        back = findViewById(R.id.button_back);
-
-        Client.retrofitService.getreservedrooms(calendar.get(Calendar.MONTH)+1, Client.username).enqueue(new Callback<ResponseBody>() {
+        Client.retrofitService.getallrooms(calendar.get(Calendar.MONTH) + 1, calendar.get(Calendar.DATE)).enqueue(new Callback<ResponseBody>() {
             @Override
             public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                ArrayList<ReservationData> datas = new ArrayList<>();
-
+                JSONObject object = null;
                 try {
-                    JSONObject object = new JSONObject(response.body().string());
+                    object = new JSONObject(response.body().string());
                     JSONArray data = object.getJSONArray("data");
                     for (int i=0; i<data.length(); i++) {
                         JSONObject room = data.getJSONObject(i);
@@ -72,18 +70,14 @@ public class ReservationCheckActivity extends Activity implements View.OnClickLi
                             case 3: time = "8시~9시"; break;
                         }
                         day = room.getString("months") + "/" + room.getString("days");
-                        datas.add(new ReservationData(roomname, time, day));
+                        datas.add(new AttendanceData(roomname, time, day));
+                        attendanceAdapter.notifyDataSetChanged();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
-                recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-                reservationAdapter = new ReservationAdapter(datas);
-                reservationAdapter.context = getApplicationContext();
-                recyclerView.setAdapter(reservationAdapter);
             }
 
             @Override
@@ -92,17 +86,20 @@ public class ReservationCheckActivity extends Activity implements View.OnClickLi
             }
         });
 
-        edit.setOnClickListener(this);
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        attendanceAdapter = new AttendanceAdapter(datas);
+        attendanceAdapter.context = getApplicationContext();
+        attendanceAdapter.activity = this;
+        recyclerView.setAdapter(attendanceAdapter);
+
+        back = findViewById(R.id.button_back);
         back.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
-        if (view.equals(edit)) {
-            reservationAdapter.isEdit = !reservationAdapter.isEdit;
-            reservationAdapter.notifyDataSetChanged();
-        }
-        else if (view.equals(back)) {
+        if (view.equals(back)) {
             finish();
         }
     }
