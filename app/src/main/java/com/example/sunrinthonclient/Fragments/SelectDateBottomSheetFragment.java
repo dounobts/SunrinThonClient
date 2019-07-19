@@ -46,6 +46,29 @@ public class SelectDateBottomSheetFragment extends BottomSheetDialogFragment imp
         timeButton2 = view.findViewById(R.id.timeButton2);
         timeButton3 = view.findViewById(R.id.timeButton3);
 
+        TextView AAAA = view.findViewById(R.id.AAAA);
+        TextView BBBB = view.findViewById(R.id.BBBBBB);
+
+        if (SelectedData.place == 0)
+            AAAA.setText("미래로 1");
+        if (SelectedData.place == 1)
+            AAAA.setText("미래로 2");
+        if (SelectedData.place == 2)
+            AAAA.setText("미래로 3");
+        if (SelectedData.place == 3)
+            AAAA.setText("세계로 1");
+        if (SelectedData.place == 4)
+            AAAA.setText("세계로 2");
+        if (SelectedData.place == 5)
+            AAAA.setText("세계로 3");
+        if (SelectedData.place == 6)
+            AAAA.setText("세계로 4");
+        if (SelectedData.place == 7)
+            AAAA.setText("세계로 5");
+        if (SelectedData.place == 8)
+            AAAA.setText("세계로 6");
+        BBBB.setText(SelectedData.month + "/" + SelectedData.day);
+
         if (SelectedData.isAdmin == false) {
             Client.retrofitService.getroom(SelectedData.month+1, SelectedData.day, 1, SelectedData.place).enqueue(new Callback<ResponseBody>() {
                 @Override
