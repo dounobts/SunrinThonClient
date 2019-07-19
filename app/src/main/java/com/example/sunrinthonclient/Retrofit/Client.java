@@ -25,7 +25,7 @@ public final class Client {
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient logger = new OkHttpClient.Builder().addInterceptor(interceptor).readTimeout(20L, TimeUnit.SECONDS).writeTimeout(20L, TimeUnit.SECONDS).build();
-        Retrofit retrofit = new retrofit2.Retrofit.Builder().baseUrl("http://58.145.101.15:3030").addConverterFactory((Converter.Factory) GsonConverterFactory.create()).client(logger).build();
+        Retrofit retrofit = new retrofit2.Retrofit.Builder().baseUrl("http://yuicrafts.xyz:16405").addConverterFactory((Converter.Factory) GsonConverterFactory.create()).client(logger).build();
         retrofitService = retrofit.create(API.class);
     }
 }
