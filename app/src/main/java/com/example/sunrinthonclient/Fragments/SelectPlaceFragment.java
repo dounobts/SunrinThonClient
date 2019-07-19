@@ -1,10 +1,6 @@
 package com.example.sunrinthonclient.Fragments;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +8,8 @@ import android.widget.Button;
 
 import com.example.sunrinthonclient.Activities.MainActivity;
 import com.example.sunrinthonclient.R;
+
+import androidx.fragment.app.Fragment;
 
 public class SelectPlaceFragment extends Fragment implements View.OnClickListener {
     MainActivity activity;

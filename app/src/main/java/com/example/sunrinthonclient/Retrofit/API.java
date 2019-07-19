@@ -1,9 +1,8 @@
 package com.example.sunrinthonclient.Retrofit;
 
-import android.support.annotation.NonNull;
-
 import org.jetbrains.annotations.NotNull;
 
+import androidx.annotation.NonNull;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;

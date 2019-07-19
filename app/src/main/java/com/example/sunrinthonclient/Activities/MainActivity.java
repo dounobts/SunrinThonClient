@@ -1,16 +1,12 @@
 package com.example.sunrinthonclient.Activities;
 
-import android.content.Intent;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 
-import com.example.sunrinthonclient.CalendarPagerAdapter;
 import com.example.sunrinthonclient.Fragments.SelectDateFragment;
 import com.example.sunrinthonclient.Fragments.SelectPlaceFragment;
 import com.example.sunrinthonclient.R;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
