@@ -3,6 +3,7 @@ package com.example.sunrinthonclient.Activities;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.sunrinthonclient.R;
@@ -19,6 +20,7 @@ public class ReservationCheckActivity extends Activity implements View.OnClickLi
     ReservationAdapter reservationAdapter;
     RecyclerView recyclerView;
     TextView edit;
+    ImageButton back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class ReservationCheckActivity extends Activity implements View.OnClickLi
 
         recyclerView = findViewById(R.id.recyclerView);
         edit = findViewById(R.id.edit);
+        back = findViewById(R.id.button_back);
 
         ArrayList<ReservationData> datas = new ArrayList<>();
         datas.add(new ReservationData("미래로 1", "7시~8시", "9/13"));
@@ -40,6 +43,7 @@ public class ReservationCheckActivity extends Activity implements View.OnClickLi
         recyclerView.setAdapter(reservationAdapter);
 
         edit.setOnClickListener(this);
+        back.setOnClickListener(this);
     }
 
     @Override
@@ -47,6 +51,9 @@ public class ReservationCheckActivity extends Activity implements View.OnClickLi
         if (view.equals(edit)) {
             reservationAdapter.isEdit = !reservationAdapter.isEdit;
             reservationAdapter.notifyDataSetChanged();
+        }
+        else if (view.equals(back)) {
+            finish();
         }
     }
 }
