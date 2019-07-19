@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.example.sunrinthonclient.Activities.LoginActivity;
-import com.example.sunrinthonclient.Activities.MainActivity;
+import com.example.sunrinthonclient.Activities.ReservationActivity;
 import com.example.sunrinthonclient.R;
 import com.example.sunrinthonclient.Retrofit.Client;
 import com.google.android.material.snackbar.Snackbar;

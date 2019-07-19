@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.example.sunrinthonclient.Activities.LoginActivity;
-import com.example.sunrinthonclient.Activities.MainActivity;
+import com.example.sunrinthonclient.Activities.ReservationActivity;
 import com.example.sunrinthonclient.R;
 import com.example.sunrinthonclient.Retrofit.Client;
 import com.google.android.material.snackbar.Snackbar;
@@ -58,7 +58,7 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                         switch (response.code()) {
                             case 200:
-                                startActivity(new Intent(activity, MainActivity.class));
+                                startActivity(new Intent(activity, ReservationActivity.class));
                                 activity.finish();
                                 break;
                             case 403:
