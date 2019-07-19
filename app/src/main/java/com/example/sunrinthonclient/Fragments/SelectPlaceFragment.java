@@ -36,15 +36,6 @@ public class SelectPlaceFragment extends Fragment implements View.OnClickListene
         title = view.findViewById(R.id.title);
 
         SelectedData.place = -1;
-        buttons.add((LinearLayout) view.findViewById(R.id.room1));
-        ((TextView)view.findViewById(R.id.room1).findViewById(R.id.room_name)).setText("미래로 1");
-        ((TextView)view.findViewById(R.id.room1).findViewById(R.id.room_size)).setText("12");
-        buttons.add((LinearLayout) view.findViewById(R.id.room2));
-        ((TextView)view.findViewById(R.id.room2).findViewById(R.id.room_name)).setText("미래로 2");
-        ((TextView)view.findViewById(R.id.room2).findViewById(R.id.room_size)).setText("12");
-        buttons.add((LinearLayout) view.findViewById(R.id.room3));
-        ((TextView)view.findViewById(R.id.room3).findViewById(R.id.room_name)).setText("미래로 3");
-        ((TextView)view.findViewById(R.id.room3).findViewById(R.id.room_size)).setText("12");
         buttons.add((LinearLayout) view.findViewById(R.id.room4));
         ((TextView)view.findViewById(R.id.room4).findViewById(R.id.room_name)).setText("세계로 1");
         buttons.add((LinearLayout) view.findViewById(R.id.room5));
@@ -57,6 +48,15 @@ public class SelectPlaceFragment extends Fragment implements View.OnClickListene
         ((TextView)view.findViewById(R.id.room8).findViewById(R.id.room_name)).setText("세계로 5");
         buttons.add((LinearLayout) view.findViewById(R.id.room9));
         ((TextView)view.findViewById(R.id.room9).findViewById(R.id.room_name)).setText("세계로 6");
+        buttons.add((LinearLayout) view.findViewById(R.id.room1));
+        ((TextView)view.findViewById(R.id.room1).findViewById(R.id.room_name)).setText("미래로 1");
+        ((TextView)view.findViewById(R.id.room1).findViewById(R.id.room_size)).setText("12");
+        buttons.add((LinearLayout) view.findViewById(R.id.room2));
+        ((TextView)view.findViewById(R.id.room2).findViewById(R.id.room_name)).setText("미래로 2");
+        ((TextView)view.findViewById(R.id.room2).findViewById(R.id.room_size)).setText("12");
+        buttons.add((LinearLayout) view.findViewById(R.id.room3));
+        ((TextView)view.findViewById(R.id.room3).findViewById(R.id.room_name)).setText("미래로 3");
+        ((TextView)view.findViewById(R.id.room3).findViewById(R.id.room_size)).setText("12");
 
         back.setOnClickListener(this);
         next.setOnClickListener(this);
