@@ -79,6 +79,7 @@ public class SelectPlaceFragment extends Fragment implements View.OnClickListene
             return;
         }
         else if (v.equals(back)) {
+            activity.finish();
 
             return;
         }

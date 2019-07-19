@@ -3,6 +3,7 @@ package com.example.sunrinthonclient.Activities;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.sunrinthonclient.R;
@@ -31,6 +32,7 @@ public class ReservationCheckActivity extends Activity implements View.OnClickLi
     ReservationAdapter reservationAdapter;
     RecyclerView recyclerView;
     TextView edit;
+    ImageButton back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class ReservationCheckActivity extends Activity implements View.OnClickLi
 
         recyclerView = findViewById(R.id.recyclerView);
         edit = findViewById(R.id.edit);
+        back = findViewById(R.id.button_back);
 
         Client.retrofitService.getreservedrooms(calendar.get(Calendar.MONTH), Client.username).enqueue(new Callback<ResponseBody>() {
             @Override
@@ -90,6 +93,7 @@ public class ReservationCheckActivity extends Activity implements View.OnClickLi
         });
 
         edit.setOnClickListener(this);
+        back.setOnClickListener(this);
     }
 
     @Override
@@ -97,6 +101,9 @@ public class ReservationCheckActivity extends Activity implements View.OnClickLi
         if (view.equals(edit)) {
             reservationAdapter.isEdit = !reservationAdapter.isEdit;
             reservationAdapter.notifyDataSetChanged();
+        }
+        else if (view.equals(back)) {
+            finish();
         }
     }
 }
