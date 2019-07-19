@@ -31,7 +31,7 @@ public class CalendarPagerAdapter extends PagerAdapter {
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(R.layout.calendar_pager_layout, container, false);
             TextView textView = (TextView) view.findViewById(R.id.text) ;
-            textView.setText(position + 1 + "월") ;
+            textView.setText(position + 1 + "") ;
             setCalendar(view, position);
         }
         container.addView(view) ;
