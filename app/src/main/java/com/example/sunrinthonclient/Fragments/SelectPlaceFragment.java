@@ -1,55 +1,104 @@
 package com.example.sunrinthonclient.Fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.sunrinthonclient.Activities.MainActivity;
 import com.example.sunrinthonclient.R;
 
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
+
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 public class SelectPlaceFragment extends Fragment implements View.OnClickListener {
     MainActivity activity;
     View view;
 
-    LinearLayout toFuture1, toFuture2, toFuture3,
-            toWorld1, toWorld2, toWorld3,
-            toWorld4, toWorld5, toWorld6;
+    ArrayList<LinearLayout> buttons = new ArrayList<>();
+    ImageButton back, next;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_select_place, container, false);
         activity = (MainActivity) getActivity();
 
-        toFuture1 = view.findViewById(R.id.place_toFuture1);
-        toFuture2 = view.findViewById(R.id.place_toFuture2);
-        toFuture3 = view.findViewById(R.id.place_toFuture3);
-        toWorld1 = view.findViewById(R.id.place_toWorld1);
-        toWorld2 = view.findViewById(R.id.place_toWorld2);
-        toWorld3 = view.findViewById(R.id.place_toWorld3);
-        toWorld4 = view.findViewById(R.id.place_toWorld4);
-        toWorld5 = view.findViewById(R.id.place_toWorld5);
-        toWorld6 = view.findViewById(R.id.place_toWorld6);
+        back = view.findViewById(R.id.button_back);
+        next = view.findViewById(R.id.button_next);
 
-        toFuture1.setOnClickListener(this);
-        toFuture2.setOnClickListener(this);
-        toFuture3.setOnClickListener(this);
-        toWorld1.setOnClickListener(this);
-        toWorld2.setOnClickListener(this);
-        toWorld3.setOnClickListener(this);
-        toWorld4.setOnClickListener(this);
-        toWorld5.setOnClickListener(this);
-        toWorld6.setOnClickListener(this);
+        activity.selectedRoom = -1;
+        buttons.add((LinearLayout) view.findViewById(R.id.room1));
+        ((TextView)view.findViewById(R.id.room1).findViewById(R.id.room_name)).setText("미래로 1");
+        ((TextView)view.findViewById(R.id.room1).findViewById(R.id.room_size)).setText("12");
+        buttons.add((LinearLayout) view.findViewById(R.id.room2));
+        ((TextView)view.findViewById(R.id.room2).findViewById(R.id.room_name)).setText("미래로 2");
+        ((TextView)view.findViewById(R.id.room2).findViewById(R.id.room_size)).setText("12");
+        buttons.add((LinearLayout) view.findViewById(R.id.room3));
+        ((TextView)view.findViewById(R.id.room3).findViewById(R.id.room_name)).setText("미래로 3");
+        ((TextView)view.findViewById(R.id.room3).findViewById(R.id.room_size)).setText("12");
+        buttons.add((LinearLayout) view.findViewById(R.id.room4));
+        ((TextView)view.findViewById(R.id.room4).findViewById(R.id.room_name)).setText("세계로 1");
+        buttons.add((LinearLayout) view.findViewById(R.id.room5));
+        ((TextView)view.findViewById(R.id.room5).findViewById(R.id.room_name)).setText("세계로 2");
+        buttons.add((LinearLayout) view.findViewById(R.id.room6));
+        ((TextView)view.findViewById(R.id.room6).findViewById(R.id.room_name)).setText("세계로 3");
+        buttons.add((LinearLayout) view.findViewById(R.id.room7));
+        ((TextView)view.findViewById(R.id.room7).findViewById(R.id.room_name)).setText("세계로 4");
+        buttons.add((LinearLayout) view.findViewById(R.id.room8));
+        ((TextView)view.findViewById(R.id.room8).findViewById(R.id.room_name)).setText("세계로 5");
+        buttons.add((LinearLayout) view.findViewById(R.id.room9));
+        ((TextView)view.findViewById(R.id.room9).findViewById(R.id.room_name)).setText("세계로 6");
+
+        back.setOnClickListener(this);
+        next.setOnClickListener(this);
+
+        for (LinearLayout linearLayout : buttons) {
+            linearLayout.setOnClickListener(this);
+        }
 
         return view;
     }
 
     @Override
-    public void onClick(View view) {
-        activity.toSelectDate(0);
+    public void onClick(View v) {
+        if (v.equals(next)) {
+            if (activity.selectedRoom == -1) {
+                // 선택된 방이 없음
+            }
+            else {
+                activity.changeFragment(1);
+            }
+
+            return;
+        }
+        else if (v.equals(back)) {
+
+            return;
+        }
+
+        for (int i = 0; i < buttons.size(); i++) {
+            if (buttons.get(i).equals(v)) {
+                activity.selectedRoom = i;
+
+                ((TextView)buttons.get(i).findViewById(R.id.room_name)).setTextColor(ContextCompat.getColor(getContext(), R.color.selected));
+                ((TextView)buttons.get(i).findViewById(R.id.room_size)).setTextColor(ContextCompat.getColor(getContext(), R.color.selected));
+                ((ImageView)buttons.get(i).findViewById(R.id.man_icon)).setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.accountup));
+            }
+            else {
+                ((TextView)buttons.get(i).findViewById(R.id.room_name)).setTextColor(ContextCompat.getColor(getContext(), R.color.unselected));
+                ((TextView)buttons.get(i).findViewById(R.id.room_size)).setTextColor(ContextCompat.getColor(getContext(), R.color.unselected));
+                ((ImageView)buttons.get(i).findViewById(R.id.man_icon)).setImageDrawable(ContextCompat.getDrawable(getContext(), R.drawable.accountdown));
+            }
+        }
     }
 }
