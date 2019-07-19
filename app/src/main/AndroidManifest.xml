@@ -16,12 +16,15 @@
         </activity>
         <activity android:name=".Activities.ReservationCheckActivity"></activity>
         <activity android:name=".Activities.LoginActivity" >
+        </activity>
+        <activity android:name=".Activities.ReservationActivity">
+        </activity>
+        <activity android:name=".Activities.AttendanceCheckActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter></activity>
-        <activity android:name=".Activities.ReservationActivity">
+            </intent-filter>
         </activity>
     </application>
 

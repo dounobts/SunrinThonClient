@@ -1,4 +1,4 @@
-package com.example.sunrinthonclient;
+package com.example.sunrinthonclient.Dialogs;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -6,15 +6,10 @@ import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
-import com.example.sunrinthonclient.Activities.ReservationActivity;
 import com.example.sunrinthonclient.Fragments.SelectDateBottomSheetFragment;
-
-import org.w3c.dom.Text;
+import com.example.sunrinthonclient.R;
 
 public class SelectTimeDialog extends Dialog {
     public SelectTimeDialog(final Context context, final SelectDateBottomSheetFragment fragment, final Activity activity) {
