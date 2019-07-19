@@ -14,6 +14,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
+<<<<<<< HEAD
+=======
+import com.example.sunrinthonclient.R;
+import com.example.sunrinthonclient.Dialogs.SelectTimeDialog;
+import com.example.sunrinthonclient.Activities.MainActivity;
+>>>>>>> ff9f7e0a22ecabb73c0f38752520b0c42ba20867
 import com.example.sunrinthonclient.Dialogs.SelectTimeDialog;
 import com.example.sunrinthonclient.R;
 import com.example.sunrinthonclient.Retrofit.Client;
@@ -22,6 +28,7 @@ import com.example.sunrinthonclient.Dialogs.UserInfoDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.snackbar.Snackbar;
 
+import androidx.core.content.ContextCompat;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
