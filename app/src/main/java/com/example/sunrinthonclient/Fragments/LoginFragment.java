@@ -8,11 +8,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.sunrinthonclient.Activities.LoginActivity;
+import com.example.sunrinthonclient.Activities.MainActivity;
 import com.example.sunrinthonclient.R;
 
 import androidx.fragment.app.Fragment;
 
 public class LoginFragment extends Fragment implements View.OnClickListener {
+    LoginActivity activity;
     View view;
 
     TextView register;
@@ -21,6 +24,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_login, container, false);
+        activity = (LoginActivity) getActivity();
 
         register = view.findViewById(R.id.button_register);
 
@@ -32,7 +36,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         if (view.equals(register)) {
-
+            activity.toRegister();
         }
     }
 }

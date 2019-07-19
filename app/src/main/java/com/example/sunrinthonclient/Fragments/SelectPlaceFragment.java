@@ -22,7 +22,6 @@ public class SelectPlaceFragment extends Fragment implements View.OnClickListene
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_select_place, container, false);
-
         activity = (MainActivity) getActivity();
 
         toFuture1 = view.findViewById(R.id.place_toFuture1);
