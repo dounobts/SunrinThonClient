@@ -2,18 +2,15 @@ package com.example.sunrinthonclient.Fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.sunrinthonclient.Activities.LoginActivity;
-import com.example.sunrinthonclient.Activities.MainActivity;
+import com.example.sunrinthonclient.Activities.ReservationActivity;
 import com.example.sunrinthonclient.R;
 import com.example.sunrinthonclient.Retrofit.Client;
 import com.google.android.material.snackbar.Snackbar;
@@ -54,7 +51,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                         switch(response.code()) {
                             case 200:
                                 activity.finish();
-                                startActivity(new Intent(activity, MainActivity.class));
+                                startActivity(new Intent(activity, ReservationActivity.class));
                                 break;
                             case 404:
                                 Snackbar.make(loginButton, "로그인 실패 : 아이디나 비번이 올바르지 않습니다", Snackbar.LENGTH_SHORT).show();

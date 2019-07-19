@@ -1,7 +1,6 @@
 package com.example.sunrinthonclient.Activities;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import com.example.sunrinthonclient.Fragments.SelectDateFragment;
 import com.example.sunrinthonclient.Fragments.SelectPlaceFragment;
@@ -10,7 +9,7 @@ import com.example.sunrinthonclient.R;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
-public class MainActivity extends AppCompatActivity {
+public class ReservationActivity extends AppCompatActivity {
 
     SelectPlaceFragment selectPlaceFragment;
     SelectDateFragment selectDateFragment;
@@ -20,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_reservation);
 
         selectPlaceFragment = new SelectPlaceFragment();
         selectDateFragment = new SelectDateFragment();

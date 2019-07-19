@@ -1,20 +1,16 @@
 package com.example.sunrinthonclient.Fragments;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.sunrinthonclient.Activities.MainActivity;
+import com.example.sunrinthonclient.Activities.ReservationActivity;
 import com.example.sunrinthonclient.R;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -22,7 +18,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 public class SelectPlaceFragment extends Fragment implements View.OnClickListener {
-    MainActivity activity;
+    ReservationActivity activity;
     View view;
 
     ArrayList<LinearLayout> buttons = new ArrayList<>();
@@ -31,7 +27,7 @@ public class SelectPlaceFragment extends Fragment implements View.OnClickListene
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_select_place, container, false);
-        activity = (MainActivity) getActivity();
+        activity = (ReservationActivity) getActivity();
 
         back = view.findViewById(R.id.button_back);
         next = view.findViewById(R.id.button_next);

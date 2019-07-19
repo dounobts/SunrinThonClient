@@ -1,13 +1,12 @@
 package com.example.sunrinthonclient.Fragments;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import com.example.sunrinthonclient.Activities.MainActivity;
+import com.example.sunrinthonclient.Activities.ReservationActivity;
 import com.example.sunrinthonclient.CalendarPagerAdapter;
 import com.example.sunrinthonclient.R;
 
@@ -17,7 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 public class SelectDateFragment extends Fragment implements View.OnClickListener {
-    MainActivity activity;
+    ReservationActivity activity;
     View view;
     ViewPager viewPager;
 
@@ -26,7 +25,7 @@ public class SelectDateFragment extends Fragment implements View.OnClickListener
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_select_date, container, false);
-        activity = (MainActivity) getActivity();
+        activity = (ReservationActivity) getActivity();
 
         viewPager = view.findViewById(R.id.calandar_viewPager);
         CalendarPagerAdapter calendarPagerAdapter = new CalendarPagerAdapter(getContext(), getFragmentManager());
