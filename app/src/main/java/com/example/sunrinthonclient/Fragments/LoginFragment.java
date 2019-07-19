@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.sunrinthonclient.Activities.LoginActivity;
 import com.example.sunrinthonclient.Activities.MainActivity;
+import com.example.sunrinthonclient.Activities.MainActivity2;
 import com.example.sunrinthonclient.Activities.ReservationActivity;
 import com.example.sunrinthonclient.R;
 import com.example.sunrinthonclient.Retrofit.Client;
@@ -53,10 +54,17 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                         switch(response.code()) {
                             case 200:
                                 Client.username = username;
-                                if (username.equals("admin"))
-                                    SelectedData.isAdmin = true;
                                 activity.finish();
-                                startActivity(new Intent(activity, MainActivity.class));
+
+                                if (username.equals("admin")) {
+                                    SelectedData.isAdmin = true;
+                                    startActivity(new Intent(activity, MainActivity2.class));
+
+                                }
+                                else {
+                                    startActivity(new Intent(activity, MainActivity.class));
+
+                                }
                                 break;
                             case 404:
                                 Snackbar.make(loginButton, "로그인 실패 : 아이디나 비번이 올바르지 않습니다", Snackbar.LENGTH_SHORT).show();
