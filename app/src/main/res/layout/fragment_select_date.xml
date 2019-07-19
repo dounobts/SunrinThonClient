@@ -17,7 +17,7 @@
         android:lineSpacingExtra="3sp"
         android:text="원하는 날짜를\n눌러주세요."
         android:textColor="#828282"
-        android:textSize="30sp"
+        android:textSize="27sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

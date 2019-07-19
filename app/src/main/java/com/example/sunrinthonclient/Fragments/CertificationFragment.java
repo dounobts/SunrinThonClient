@@ -10,17 +10,11 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 
 import com.example.sunrinthonclient.Activities.LoginActivity;
-import com.example.sunrinthonclient.Activities.ReservationActivity;
 import com.example.sunrinthonclient.R;
 import com.example.sunrinthonclient.Retrofit.Client;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.fragment.app.Fragment;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;

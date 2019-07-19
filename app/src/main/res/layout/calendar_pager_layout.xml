@@ -11,18 +11,16 @@
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/spoqa_han_sans_bold"
         android:gravity="center"
         android:lineSpacingExtra="14sp"
         android:text="1"
-        android:fontFamily="@font/spoqa_han_sans_bold"
         android:textColor="#828282"
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         tools:text="9" />
 
     <TableLayout
@@ -42,27 +40,32 @@
             <TextView
                 android:id="@+id/week_mon"
                 style="@style/week"
-                android:text="M" />
+                android:text="M"
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/week_tue"
                 style="@style/week"
-                android:text="THU" />
+                android:text="THU"
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/week_wed"
                 style="@style/week"
-                android:text="W" />
+                android:text="W"
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/week_thur"
                 style="@style/week"
-                android:text="THR" />
+                android:text="THR"
+                android:layout_weight="1"/>
 
             <TextView
                 android:id="@+id/week_fri"
                 style="@style/week"
-                android:text="F" />
+                android:text="F"
+                android:layout_weight="1"/>
         </TableRow>
 
         <TableRow>

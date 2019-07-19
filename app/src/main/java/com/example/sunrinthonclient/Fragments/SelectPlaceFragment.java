@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.sunrinthonclient.Activities.ReservationActivity;
 import com.example.sunrinthonclient.R;
+import com.example.sunrinthonclient.SelectedData;
 
 import java.util.ArrayList;
 
@@ -32,7 +33,7 @@ public class SelectPlaceFragment extends Fragment implements View.OnClickListene
         back = view.findViewById(R.id.button_back);
         next = view.findViewById(R.id.button_next);
 
-        activity.selectedRoom = -1;
+        SelectedData.place = -1;
         buttons.add((LinearLayout) view.findViewById(R.id.room1));
         ((TextView)view.findViewById(R.id.room1).findViewById(R.id.room_name)).setText("미래로 1");
         ((TextView)view.findViewById(R.id.room1).findViewById(R.id.room_size)).setText("12");
@@ -84,7 +85,7 @@ public class SelectPlaceFragment extends Fragment implements View.OnClickListene
 
         for (int i = 0; i < buttons.size(); i++) {
             if (buttons.get(i).equals(v)) {
-                activity.selectedRoom = i;
+                SelectedData.place = i;
 
                 ((TextView)buttons.get(i).findViewById(R.id.room_name)).setTextColor(ContextCompat.getColor(getContext(), R.color.selected));
                 ((TextView)buttons.get(i).findViewById(R.id.room_size)).setTextColor(ContextCompat.getColor(getContext(), R.color.selected));

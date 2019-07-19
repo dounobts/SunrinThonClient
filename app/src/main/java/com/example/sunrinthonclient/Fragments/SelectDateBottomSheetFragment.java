@@ -1,24 +1,49 @@
 package com.example.sunrinthonclient.Fragments;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.sunrinthonclient.R;
+import com.example.sunrinthonclient.SelectTimeDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
-public class SelectDateBottomSheetFragment extends BottomSheetDialogFragment {
+public class SelectDateBottomSheetFragment extends BottomSheetDialogFragment implements View.OnClickListener {
+    View view;
+    TextView timeButton1, timeButton2, timeButton3;
+
     public static SelectDateBottomSheetFragment getInstance() { return new SelectDateBottomSheetFragment(); }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.bottomsheet_selectdate, container, false);
+        view = inflater.inflate(R.layout.bottomsheet_selectdate, container, false);
+
+        timeButton1 = view.findViewById(R.id.timeButton1);
+        timeButton2 = view.findViewById(R.id.timeButton2);
+        timeButton3 = view.findViewById(R.id.timeButton3);
+
+        timeButton1.setOnClickListener(this);
+        timeButton2.setOnClickListener(this);
+        timeButton3.setOnClickListener(this);
+
+        //new SelectTimeDialog(mContext).show();
+
         return view;
+    }
+
+    @Override
+    public void onClick(View view) {
+        
     }
 }

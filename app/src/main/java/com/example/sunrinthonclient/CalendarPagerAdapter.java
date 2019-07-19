@@ -105,11 +105,10 @@ public class CalendarPagerAdapter extends PagerAdapter {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Log.i("calendar", "year : " + year);
-                    Log.i("calendar", "month : " + month);
-                    Log.i("calendar", "day : " + ((TextView)view).getText().toString());
+                    SelectedData.year = year;
+                    SelectedData.month = month;
+                    SelectedData.day = Integer.parseInt(((TextView)view).getText().toString());
 
-                    //new SelectTimeDialog(mContext).show();
                     SelectDateBottomSheetFragment bottomSheetDialog = SelectDateBottomSheetFragment.getInstance();
                     bottomSheetDialog.show(fragmentManager,"bottomSheet");
 
