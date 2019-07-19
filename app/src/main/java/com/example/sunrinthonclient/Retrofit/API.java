@@ -18,7 +18,12 @@ public interface API  {
     @POST("/account/register")
     @FormUrlEncoded
     @NotNull
-    Call<ResponseBody> register(@Field("username") @NotNull String username, @Field("password") @NotNull String password);
+    Call<ResponseBody> register(@Field("username") @NotNull String username, @Field("password") @NotNull String password,
+                                @Field("name") @NotNull String name, @Field("personalID") @NotNull String personalID);
+    @POST("/account/certificate")
+    @FormUrlEncoded
+    @NotNull
+    Call<ResponseBody> certificate(@Field("registerkey") @NotNull String registerkey, @Field("personalID") int personalID);
 
     @POST("/reservation/reserve")
     @FormUrlEncoded

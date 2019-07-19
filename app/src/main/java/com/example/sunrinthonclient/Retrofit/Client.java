@@ -11,6 +11,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public final class Client {
     public static API retrofitService;
     public static final Client INSTANCE;
+    public static String name;
+    public static String personalid;
 
     public final API getRetrofitService() {
         return retrofitService;
