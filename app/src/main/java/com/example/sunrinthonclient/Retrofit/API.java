@@ -92,4 +92,9 @@ public interface API  {
     @NotNull
     Call<ResponseBody> getroom(@Field("months")  int months, @Field("days")  int days,
                                @Field("time")  int time, @Field("roomnumber")  int roomnumber);
+
+    @POST("/reservation/getprofile")
+    @FormUrlEncoded
+    @NotNull
+    Call<ResponseBody> getprofile(@Field("username") @NonNull String username);
 }
